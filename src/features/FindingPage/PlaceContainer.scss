@@ -1,0 +1,17 @@
+@import "../../assets/styles/mixins.scss";
+
+.places-navigation {
+   @include grid-mixin((1fr, fit-content),false,center);
+   font-size: 1.4rem;
+   font-weight: var(--medium-font-weight);
+   color: var(--light-text-color);
+   padding: 2rem 0;
+
+   &__item {
+      margin-right: 2rem;
+   }
+
+   > * {
+      display: flex;
+   }
+}

@@ -1,0 +1,42 @@
+@import "../../assets/styles/mixins.scss";
+$padding: 2.4rem;
+
+.footer-item{
+   font-size: 1.4rem;
+
+   @include respond(big) {
+      grid-column: 1/-1;
+      padding-bottom: $padding;
+      border-bottom: 1px solid var(--border-color);
+   }
+   &__heading {
+      font-weight: var(--bold-font-weight);
+
+      @include respond(big) {
+         margin-top: $padding;
+      } 
+   }
+
+   &__list {
+      @include respond(big) {
+         @include grid-mixin(repeat(3,1fr));
+         grid-column-gap: 4rem;
+      }
+
+      @include respond(small) {
+         grid-template-columns: 1fr;
+      }
+   }
+   &__item {
+      margin-top: 1.6rem;
+      cursor: pointer;
+
+      &:hover {
+         text-decoration: underline;
+      }
+
+      @include respond(big) {
+         // margin-top: 0;
+      }
+   }
+}

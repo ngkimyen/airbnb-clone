@@ -1,0 +1,11 @@
+@import "../../assets/styles/mixins.scss";
+
+.connect-section {
+   padding-right: var(--large-padding) ;
+   padding-left: var(--large-padding) ;
+
+   @include respond(biggest) {
+      padding-right: 0;
+      padding-left: 0;
+   }
+}  

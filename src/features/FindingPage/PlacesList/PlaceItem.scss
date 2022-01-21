@@ -1,0 +1,45 @@
+@import "../../../assets/styles/mixins.scss";
+
+%right-side {
+   white-space: nowrap;
+   margin-left: 1.6rem;
+}
+
+.place-item {
+   position: relative;
+
+   &__info {
+      font-size: 1.6rem;
+
+      > div {
+         @include flex-mixin(center, space-between);
+      }
+   }
+
+   &__heading{
+      color: var(--black-color-2);
+   }
+   &__location {
+      font-weight: var(--bold-font-weight);
+   }
+   &__price {
+      @extend %right-side;
+   }
+
+   &__date {
+      font-size: 1.4rem;
+      @extend %right-side;
+   }
+
+   &__location,
+   &__distance {
+      -webkit-line-clamp: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+   }
+
+   &__description {
+      font-weight: var(--small-font-weight);
+   }
+}

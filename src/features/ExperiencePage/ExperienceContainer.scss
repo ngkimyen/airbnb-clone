@@ -1,0 +1,21 @@
+@import "../../assets/styles/mixins.scss";
+
+.experience-container {
+   margin: 5rem 0;
+
+   > p {
+      font-size: 1.4rem;
+      font-weight: var(--small-font-weight);
+   }
+
+   &__heading {
+      font-size: 3.2rem;
+      font-weight: var(--bold-font-weight);
+      margin-bottom: 2rem;
+   }
+   &__tours {
+      @include grid-mixin( repeat(auto-fit, minmax(22rem, 1fr)));
+      grid-row-gap: 3rem;
+      margin: 5rem -1rem;
+   }
+}

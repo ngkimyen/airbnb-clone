@@ -1,0 +1,32 @@
+@import '../../../assets/styles/mixins.scss';
+
+.search-section {
+   padding-bottom: 3rem;
+   
+   @include grid-mixin(1fr minmax(min-content, var(--search-block-width)) 1fr);
+         
+   @include respond(small) {
+      display: none;
+   }
+
+   .search-block {
+      grid-column: 2/3;
+      border-radius: 10rem;
+      background-color: var(--light-grey-color);
+      border: 1px solid var(--border-color);
+
+      position: relative;
+      @include grid-mixin(1.5fr repeat(3, 1fr) min-content,false,center);
+      
+      
+      &--experience {
+         grid-template-columns: repeat(2, 1fr) min-content;
+      }
+   }
+
+   &--sticky {
+      grid-row: 2/3;
+      grid-column: 1/-1;
+      background-color: transparent;
+   }
+}

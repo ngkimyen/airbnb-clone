@@ -1,0 +1,33 @@
+@import "../../../../../assets/styles/mixins.scss";
+
+.guest-item {
+
+   @include flex-mixin(center, space-between);
+   padding: 1.4rem 0;
+   border-bottom: 1px solid var(--border-color);
+   width: 33rem;
+
+   &:first-child {
+      padding-top: 0;
+   }
+
+   &:last-of-type {
+      border-bottom: none;
+   }
+
+   &__content{
+      flex: 1;
+   }
+   &__heading{
+      font-size: 1.6rem;
+      font-weight: var(--medium-font-weight);
+   }
+
+   &__link {
+      font-weight: var(--medium-font-weight);
+      font-size: 1.4rem;
+      text-decoration: underline;
+      text-align: left;
+   }
+
+}

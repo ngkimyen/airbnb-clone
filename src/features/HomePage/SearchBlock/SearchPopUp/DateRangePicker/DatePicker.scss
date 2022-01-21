@@ -1,0 +1,9 @@
+@import '../../../../../assets/styles/mixins.scss';
+
+.datepicker-popup {
+   right: 0;
+   @include flex-mixin(flex-start);
+   width: 100%;
+   max-height: calc(100vh - 18rem);
+   overflow: auto;
+}

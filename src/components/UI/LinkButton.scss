@@ -1,0 +1,33 @@
+@import "../../assets/styles/mixins.scss";
+
+.link-button {
+
+   font-size: 1.6rem;
+   font-weight: var(--medium-font-weight);
+   padding: 1.5rem 2.5rem;
+   background-color: var(--white-color);
+   border-radius: 1rem;
+
+   &:hover {
+      filter: brightness(.9);
+   }
+
+   &--gradient {
+      font-size: 1.8rem;
+      font-weight: var(--bold-font-weight);
+      border-radius: 5rem;
+      padding: 1.5rem 3.5rem;
+
+      @include respond(medium) {
+         font-size: 1.5rem;
+      }
+
+   }
+
+   &--dark {
+      color: var(--white-color);
+      background-color: var(--black-color);
+      display: block;
+      margin: 0 auto;
+   }
+}

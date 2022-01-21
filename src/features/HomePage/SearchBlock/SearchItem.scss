@@ -1,0 +1,85 @@
+@import "../../../assets/styles/mixins.scss";
+
+$sub-heading-font: 1.4rem;
+
+%bold-text {
+   font-size: 1.2rem;
+   color: var(--black-color);
+   font-weight: var(--bold-font-weight);
+}
+
+%grey-text {
+   font-size: $sub-heading-font;
+   color: var(--light-text-color);
+   font-weight: var(--medium-font-weight);
+}
+
+.search-item {
+   padding: 1.5rem 2.5rem;
+   position: relative;
+   border-radius: 10rem;
+   cursor: pointer;
+   height: 100%;
+   transition: .3s;
+
+   
+   &:hover {
+      background-color: #EBEBEB ;
+   }
+   
+   &--active {
+      background-color: var(--white-color);
+      @include box-shadow(0 5px 10px);
+
+      &:hover {
+         background-color: var(--white-color) ;
+      }
+   }
+   
+   &:not(:first-of-type)::after {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 3rem;
+      background-color: var(--border-color);
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+   }
+
+   &--active::after,
+   &--active + &::after,
+   &:hover + &::after, 
+   &:hover::after {
+      background-color: transparent !important;
+   }
+   
+   &.display-border::after {
+      background-color: var(--border-color);
+   }
+
+   &:last-of-type {
+      grid-column: -3/ span 2 ;
+      grid-row: 1/2 ;
+   }
+
+   &__heading{
+      @extend %bold-text;
+   }
+
+   &__subheading--description{
+      color: var(--black-color);
+      width: 55%;
+      @include text-limit;
+   }
+
+
+   &__input {
+      width: 100%;
+      @extend %bold-text;
+      font-size: $sub-heading-font;
+      &::placeholder {
+         @extend %grey-text ;
+      }
+   }
+}

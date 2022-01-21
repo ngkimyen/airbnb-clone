@@ -1,0 +1,45 @@
+@import "../../../../assets/styles/mixins.scss" ;
+
+.location-popup {
+   width: 50rem;
+   background-color: var(--white-color);
+   left: 0;
+
+   &--mobile {
+      position: unset;
+      width: unset;
+      padding: 2rem 0;
+      box-shadow: none;
+   
+   }
+
+   &--mobile  &__button {
+      box-shadow: 0 8px 10px var(--light-shadow-color);
+   }
+
+   &__heading {
+      font-size: 1.2rem;
+      font-weight: var(--bold-font-weight);
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+   }
+
+   &__button {
+      width: 100%;
+      @include flex-mixin(center, space-between);
+      border-radius: 5rem;
+      border: 1px solid var(--border-color);
+      padding: 1.6rem 2.4rem;
+   }
+
+   &__video {
+      height: 2.8rem;
+      width: 2.8rem;
+   }
+
+   &__text {
+      font-size: 1.8rem;
+      font-weight: var(--bold-font-weight);
+   }
+
+}

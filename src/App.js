@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import ExperienceOnlinePage from "./features/ExperienceOnlinePage";
+import ExperiencePage from "./features/ExperiencePage";
+
+import FindingPage from "./features/FindingPage/FindingPage";
+import HomePage from "./features/HomePage";
+
+import SearchProvider from "./store/SearchProvider";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <SearchProvider>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/flexible-finding" element={<FindingPage />} />
+        <Route path="/experience" element={<ExperiencePage />} />
+        <Route path="/experience/online" element={<ExperienceOnlinePage />} />
+      </Routes>
+    </SearchProvider>
   );
 }
 

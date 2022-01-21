@@ -1,0 +1,25 @@
+@import "../../../assets/styles/mixins.scss";
+
+.m-search-popup {
+   position:fixed;
+   top:0;
+   right: 0;
+   left: 0;
+   bottom: 0;
+   background-color: var(--white-color);
+   padding: 5rem 3rem;
+
+   &__heading {
+      @include flex-mixin(center)
+   }
+
+   &__input {
+      flex: 1;
+      padding: 1rem; 
+      font-size: 1.6rem;
+
+      &::placeholder {
+         font-size: 1.6rem;
+      }
+   }
+}

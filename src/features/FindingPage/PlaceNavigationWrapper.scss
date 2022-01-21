@@ -1,0 +1,28 @@
+@import "../../assets/styles/mixins.scss";
+
+.places-navigation__wrapper {
+
+   &.sticky {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 2rem var(--large-padding);
+      z-index: 100;
+      box-shadow: 0 5px 10px var(--light-shadow-color);
+      background-color: var(--white-color);
+
+      @include respond(big) {
+         padding: 2rem var(--medium-padding);
+      }
+      @include respond(small) {
+         padding: 2rem var(--small-padding);
+      }
+   }
+
+   &.sticky *::after {
+      bottom: -2.6rem;
+   }
+
+
+}

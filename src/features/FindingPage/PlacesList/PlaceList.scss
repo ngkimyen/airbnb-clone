@@ -1,0 +1,7 @@
+@import "../../../assets/styles/mixins.scss";
+
+.places-list {
+   padding: 1rem 0 5rem;
+   @include grid-mixin(repeat(auto-fit, minmax(25rem, 1fr)));
+   grid-gap: 2rem;
+}

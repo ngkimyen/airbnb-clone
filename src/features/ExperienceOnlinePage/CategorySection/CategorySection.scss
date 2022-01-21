@@ -1,0 +1,11 @@
+.category-section {
+   padding: 3rem 0;
+   
+   &__slider {
+      margin : 0 -1rem;
+
+      > button {
+         visibility: hidden;
+      }
+   }
+}

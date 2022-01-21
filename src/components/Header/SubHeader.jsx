@@ -1,0 +1,22 @@
+import clsx from 'clsx';
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import useViewPort from '../../custom-hooks/useViewPort';
+import { PrevButton } from '../UI/PrevNextButton';
+import HeaderLogo from './HeaderLogo';
+import HeaderOptions from './HeaderOptions/HeaderOptions';
+import "./SubHeader.scss";
+
+const SubHeader = ({searchInput, headerIsFixed}) => {
+   const {isSmall : screenIsSmall} = useViewPort();
+
+   return (
+      <header className={clsx("sub-header u-padding", {"sub-header--fixed": headerIsFixed})}>
+         {!screenIsSmall ? <HeaderLogo isLight/> : <NavLink to="/" ><PrevButton isBig/></NavLink>}
+         {!screenIsSmall && searchInput && searchInput}
+         <HeaderOptions isLight/>
+      </header>
+   );
+};
+
+export default SubHeader;

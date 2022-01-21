@@ -1,0 +1,51 @@
+@import "../../assets/styles/mixins.scss";
+
+.header{
+   background-color: var(--black-color);
+   color: var(--white-color);
+   transition:  .3s ease-in-out;
+   
+   @include respond(small) {
+      height: 0;
+   }
+
+   &--light {
+      background-color: var(--white-color);
+      
+   }
+   
+   &__container {
+      height: var(--header-height);
+      max-width: 180rem;
+      margin: 0 auto;
+      @include grid-mixin(1fr max-content 1fr, false, center);
+
+      @include respond(medium) {
+         @include grid-mixin(1fr 1fr, var(--header-height) max-content);
+         height: fit-content;
+         
+      }
+
+      @include respond(small) {
+         display: none;
+      }
+   }
+   &--sticky {
+      background-color: var(--white-color);
+      position: fixed;
+      left: 0;
+      right: 0;
+      box-shadow: 0 5px 5px var(--light-shadow-color);
+      top: 0;
+      z-index: 100;
+   }
+
+   &--sticky &__container {
+      @include respond(medium) {
+         grid-template-columns: repeat(2,min-content) 1fr;
+         grid-column-gap: 2.4rem;
+         
+      }
+   }
+
+}

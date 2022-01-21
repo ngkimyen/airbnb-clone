@@ -1,0 +1,13 @@
+@import "../../assets/styles/mixins.scss";
+
+.inspiration-section {
+
+   &__list {
+      margin: 0 -1rem;
+
+      button {
+         visibility: hidden;
+      }
+   }
+
+}

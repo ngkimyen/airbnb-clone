@@ -1,0 +1,10 @@
+@import "../../assets/styles/mixins.scss";
+
+.flexible-finding {
+   background-color: var(--black-color);
+
+   @include respond(small) {
+      padding-top: 0 !important;
+      height: 100vh;
+   }
+}

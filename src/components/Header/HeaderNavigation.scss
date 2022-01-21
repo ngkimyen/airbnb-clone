@@ -1,0 +1,60 @@
+@import "../../assets/styles/mixins.scss";
+
+.header__navigation {
+   display: flex;
+   @include respond(medium) {
+      grid-row: 2/3;
+      grid-column: 1/-1;
+      justify-self: center;
+      padding-bottom: 3rem;
+   }
+
+   &--item {
+      font-size: 1.6rem;
+      cursor: pointer;
+      position: relative;
+      transition: .2s;
+      
+      &::after {
+         transition: .2s;
+         content: "";
+         height: 2px;
+         background-color: transparent;
+         position: absolute;
+         bottom: -.7rem;
+         left: 50%;
+         transform: translateX(-50%);
+         border-radius: 5px;
+      }
+      
+      
+      &:hover {
+         filter: brightness(.7);
+      }
+      &:hover::after {
+         background-color: currentColor;
+         width: 5px;
+      }
+      
+      &.active{
+         &::after {
+            background-color: currentColor;
+            width: 20px;
+         }
+
+         &:hover {
+            filter: brightness(1);
+         }
+      }
+
+   }
+
+   &--item:not(:last-of-type) {
+      margin-right: 3.5rem;
+   }
+   
+   &--sticky {
+      color: var(--black-color);
+   }
+
+}

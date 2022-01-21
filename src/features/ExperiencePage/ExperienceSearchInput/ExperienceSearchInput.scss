@@ -1,0 +1,21 @@
+@import "../../../assets/styles/mixins.scss";
+
+.experience-search {
+   @include search-input;
+   cursor: pointer;
+   
+   > span {
+      padding: 0 1.6rem;
+   }
+
+   &__date {
+      color: var(--light-text-color);
+      border-left: 1px solid var(--border-color);
+   }
+
+   &__nearby {
+      font-weight: var(--medium-font-weight);
+   }
+
+
+}

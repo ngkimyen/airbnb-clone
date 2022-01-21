@@ -1,0 +1,17 @@
+@import '../../assets/styles/mixins.scss';
+
+.headerSearch {
+
+   &__button {
+      @include search-input;      
+      padding-left: 2rem;
+      width: 30rem;
+      font-weight: var(--medium-font-weight);
+      @include flex-mixin(center,space-between);
+      
+      &:hover {
+         @include box-shadow;
+      }
+   }
+
+}

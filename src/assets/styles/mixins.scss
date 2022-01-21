@@ -1,0 +1,73 @@
+@mixin respond($size) {
+   @if $size == biggest { // 1440px
+     @media only screen and (max-width: 91em) {@content}
+   };
+ 
+   @if $size == big { // 1125px
+     @media only screen and (max-width: 70.3em) {@content}
+   };
+
+   @if $size == medium { // 950px
+      @media only screen and (max-width: 59.375em) {@content}
+    };
+
+   @if $size == small { // 745px
+   @media only screen and (max-width: 46.56em) {@content}
+   };
+
+   @if $size == smallest { // 384px
+      @media only screen and (max-width: 24em) {@content}
+   };
+}  
+
+ 
+@mixin flex-mixin ($vertical :false, $horizontal: false) {
+   display: flex;
+   @if $vertical {
+      align-items: $vertical;
+
+   }
+   @if $horizontal {
+      justify-content: $horizontal;
+   }
+}
+
+@mixin grid-mixin($column, $row:false, $vertical:false, $horizontal: false) {
+   display: grid;
+   @if $column {
+      grid-template-columns: $column;
+   }
+   @if $row {
+      grid-template-rows: $row;
+   }
+   @if $vertical {
+      align-items: $vertical;
+   }
+   @if $horizontal {
+      justify-items: $horizontal;
+   }
+}
+
+@mixin box-shadow($property : 0 2px 5px, $shadow-color:var(--box-shadow-color) ) {
+   box-shadow : $property $shadow-color;
+}
+
+@mixin text-limit($number : 1){
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp: $number;
+}
+
+@mixin search-input {
+   border: 1px solid var(--border-color);
+   border-radius: 10rem;
+   padding: .7rem;
+   // padding-left: 2rem;
+   font-size: 1.4rem;
+   color: var(--black-color-2);
+   @include box-shadow(0 1px 3px);
+
+}
+

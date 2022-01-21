@@ -1,0 +1,65 @@
+@import '../../assets/styles/mixins.scss';
+
+.banner-container {
+   border-radius: 1.5rem;
+   padding: 8rem;
+   text-align: center;
+   background-size: cover;
+   background-position: center;
+   
+   @include respond(big) {
+      padding: 2.4rem;
+   }
+
+   &__heading {
+      font-weight: var(--bold-font-weight);
+      color: var(--white-color);
+      white-space: pre-line;
+      margin-bottom: 3rem;
+      line-height: 1.1;
+      text-align: left;
+
+      &--medium {
+         font-size: 4.8rem;
+         text-align:center;
+      }
+
+      &--big {
+         font-size: 5rem;
+      }
+
+      &--biggest {
+         font-size: 9rem;
+      }
+      
+      @include respond(biggest) {
+         &--biggest {
+            font-size: 7.4rem;
+         }
+         
+         &--big {
+            font-size: 4.1rem;
+         }
+         &--medium {
+            font-size: 3.8rem;
+         }
+      }
+      @include respond(big) {
+         &--biggest {
+            font-size: 4.9rem;
+         }
+
+         &--big {
+            font-size: 3.4rem;
+         }
+         &--medium {
+            font-size: 3.2rem;
+         }
+      }
+
+   }
+
+
+
+
+}

@@ -1,0 +1,109 @@
+
+:root {
+  --primary-color: #FF385C ;
+
+  --medium-grey-color: rgb(247,247,247);
+  --light-grey-color: #F7F7F7;
+  
+  --black-color: #000;
+  --black-color-2: #222222;
+  --white-color: #FFF;
+  --light-text-color:#717171 ;
+  --text-color: rgb(34,34,34);
+
+  --border-color: #dddddd;
+  --dark-border-color: #B0B0B0;
+  --background-color: rgb(249, 249, 249);
+  --footer-background-color:rgb(237 236 236);
+
+  --box-shadow-color: rgba(0,0,0,0.2);
+  --light-shadow-color: rgba(0,0,0,0.05);
+  --black-shadow-color: rgba(155,150,150 ,.2);
+  
+  --font-family: 'Nunito', -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  --sub-font-family: 'Montserrat',  -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+
+  --header-height: 8rem;
+  --search-block-width: 85rem;
+
+  --large-padding: 8rem;
+  --medium-padding: 4rem;
+  --small-padding: 2.4rem;
+  
+  --small-font-weight: 400;
+  --medium-font-weight: 600;
+  --bold-font-weight: 800;
+
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5% ;
+}
+
+body {
+  font-family: var(--sub-font-family);
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  box-sizing: border-box;
+  color: var(--text-color);
+  // font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.5;
+
+}
+
+*, *::after, *::before { 
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  border: none;  
+  min-height: 0;
+  min-width: 0;
+
+} 
+
+a,a:link, a:visited {
+  text-decoration: none;
+  background-color: transparent;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  background-color: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+input:focus {
+  outline: none;
+}
+input {
+  background-color: transparent;
+  font-family: var(--font-family);
+}
+input::placeholder {
+  font-family: var(--font-family);
+}
+.clickable,
+label,
+input[type=button],
+input[type=submit],
+input[type=file],
+a,
+button {cursor: pointer;}
+
+img,
+object,
+embed {max-width: 100%;}
+
+bold {
+  font-weight: var(--bold-font-weight);
+}

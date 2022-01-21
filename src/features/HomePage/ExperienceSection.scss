@@ -1,0 +1,24 @@
+@import '../../assets/styles/mixins.scss';
+
+.experience-section {
+
+   &__wrapper {
+      max-width: 192rem;
+      margin: 0 auto;
+   }
+
+
+   &__container {
+      @include grid-mixin(repeat(auto-fit, minmax(32.2rem, 1fr)), 50vw);
+      grid-column-gap: 2.5rem;
+
+      @include respond(big) {
+         grid-column-gap: 2rem;
+      }
+
+      @include respond(small) {
+         grid-template-rows: 85vh 85vh;
+         grid-row-gap: 1rem;
+      }
+   }
+}

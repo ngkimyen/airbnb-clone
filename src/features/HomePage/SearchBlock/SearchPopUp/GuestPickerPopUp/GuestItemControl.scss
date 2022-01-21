@@ -1,0 +1,34 @@
+@import '../../../../../assets/styles/mixins.scss';
+
+.guest-control {
+   @include grid-mixin(repeat(3,1fr),false,center);
+   grid-gap: 1rem;
+
+   &--value {
+      font-size: 1.6rem;
+      font-weight: var(--small-font-weight);
+      text-align: center;
+   }
+
+   > button {
+      border-radius: 50%;
+      width: 3.2rem;
+      height: 3.2rem;
+      border: 1px solid rgb(176, 176, 176);
+      font-weight: var(--medium-font-weight);
+      font-size: 2.2rem;
+      color: rgb(113, 113, 113);
+      transition: .2s;
+
+      &:hover {
+         border: 1px solid var(--black-color);
+         color: var(--black-color);
+      }
+
+      &:disabled {
+         cursor: not-allowed ;
+         color: rgb(235, 235, 235) ;
+         border-color: currentColor ;
+      }
+   }
+}

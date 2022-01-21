@@ -1,0 +1,96 @@
+@import "../../../assets/styles/mixins.scss";
+
+%button-style {
+   font-size: 1.4rem;
+   color: var(--black-color);
+   padding: 1rem  1.6rem;
+   border-radius: 50rem;
+}
+
+.latest-filter {
+   @include flex-mixin(center);
+   padding-top: 2rem;
+   padding-bottom: 2rem;
+   
+   
+   &__option {
+      border-right: 1px solid var(--border-color);
+      @include flex-mixin(center);
+
+      @include respond(small) {
+         border-right: none;
+         justify-content: space-between;
+         width: 100%;
+      }
+
+   }
+   &__button {
+      @extend %button-style;
+      border: 1px solid var(--dark-border-color);
+      
+      &:not(:last-child) {
+         margin-right: 1rem;
+      }
+
+      &:hover {
+         border-color: var(--black-color);
+      }
+
+      @include respond(small) {
+         margin-right: 0;
+      }
+
+ 
+   }
+
+   
+   &__category {
+      width: fit-content !important;
+      @extend %button-style;
+      background-color: var(--light-shadow-color);
+      margin-right: 1rem;
+      cursor: pointer;
+   }
+   
+   &__slide-wrap {
+      flex: 1;
+      margin-left: 2rem;
+
+      @include respond(small) {
+         display: none;
+      }
+   }
+   
+   &__slider {
+      width: 100%;
+      position: relative;
+
+
+       button {
+         position: absolute;
+         top: 50%;
+         transform: translateY(-50%);
+         border: 1px solid var(--dark-border-color);
+         width: 4rem;
+         height: 4rem;
+         background-color: var(--white-color);
+         z-index: 10;
+
+         &:hover {
+            background-color: var(--white-color);
+         }
+
+         &:first-of-type {
+            left: -1rem !important;
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0);
+         }
+         &:last-of-type {
+            right: -1rem !important;
+         }
+
+         &:disabled {
+            display: none;
+         }
+      }
+   }
+}

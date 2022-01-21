@@ -1,0 +1,73 @@
+@import "../../../assets/styles/mixins.scss";
+
+.section-header {
+   @include flex-mixin(center, space-between);
+   padding-bottom: 2.2rem;
+   font-weight: var(--medium-font-weight);
+   letter-spacing: -1px;
+
+   &__heading{
+      font-size: 2.2rem;
+      flex: 1;
+      font-weight: inherit;
+   }
+   
+   &.big {
+      padding-bottom: 3.2rem
+   }
+   
+   &.big &__heading {
+      font-size: 3.2rem;
+
+      @include respond(small) {
+         font-size: 2.2rem;
+      };
+   }
+
+   &.biggest &__heading {
+      font-size: 4.2rem;
+
+      @include respond(big) {
+         font-size: 3.3rem;
+      };
+      @include respond(medium) {
+         font-size: 2.5rem;
+      };
+   }
+   
+
+
+   &__navigate {
+      display: flex;
+
+      > button {
+         border: 1px solid var(--border-color);
+         transition: .2s;
+
+         &:last-child {
+            margin-right: 1rem;
+         }
+
+         &:disabled {
+            cursor: not-allowed;
+         }
+
+         &:hover {
+            background-color: unset;
+            transform: scale(1.05);
+         }
+      }
+   }
+
+   &__description {
+      font-size: 1.4rem;
+      text-decoration: underline;
+      margin-right: 2rem;
+      cursor: pointer;
+
+      @include respond(small) {
+         display: none;
+      };
+   }
+
+}

@@ -1,0 +1,40 @@
+@import '../../../../../assets/styles/mixins.scss';
+
+%selected-styling {
+   background-color: var(--black-color);
+   color: var(--white-color);
+}
+.date-item {
+   font-weight: var(--medium-font-weight);
+   font-size: 1.4rem;
+   border-radius: 50%;  
+   width: 100%;
+   height: 100%;
+   @include flex-mixin(center,center);
+   
+   &--expired {
+      opacity: .4;
+   }
+
+   &--active {
+      opacity: 1;
+      cursor: pointer;
+
+      &:hover {
+         border: 1px solid var(--black-color);
+      }
+   }
+
+   
+   &:hover {
+      @include box-shadow;
+      border-radius: 50%;
+   }
+   
+   &--range {
+      background-color: var(--light-shadow-color);
+   }
+   &--selected {
+      @extend %selected-styling;
+   }
+}

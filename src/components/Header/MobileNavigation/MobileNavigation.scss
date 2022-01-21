@@ -1,0 +1,16 @@
+@import "../../../assets/styles/mixins.scss";
+
+.mobile-navigation {
+   display: none;
+   position: fixed;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: var(--white-color);
+   padding: 1rem;
+   z-index: 1000;
+   
+   @include respond(small) {
+      @include flex-mixin(center,center)
+   }
+}

@@ -1,0 +1,19 @@
+.absolute-btn {
+   position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      z-index: 10;
+      cursor: pointer;
+      transition: .2s;
+      > svg {
+         stroke: var(--white-color);
+         fill: rgba(0,0,0,0.5);
+         stroke-width:  2px;
+         width: 2.4rem;
+         height: 2.4rem;
+      }
+
+      &:active {
+         transform: translateY(1px);
+      }
+}

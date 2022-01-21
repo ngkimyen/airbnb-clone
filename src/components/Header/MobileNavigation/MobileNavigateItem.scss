@@ -1,0 +1,35 @@
+.mobile-navigate-item {
+   text-align: center;
+   z-index: 1000;
+   color: var(--light-text-color);
+   
+   &:not(:first-of-type) {
+      margin-left: 6rem;
+   }
+
+   &.is-stroke > svg {
+      stroke: currentColor;
+      stroke-width: 2px;
+      fill: none;
+   }
+
+   &.is-active {
+      color: var(--primary-color);
+   }
+
+   &.is-active &__heading {
+      color: var(--black-color);
+   }
+
+  > svg {
+    width: 2.4rem;
+    height: 2.4rem;
+    fill: currentColor;
+  }
+
+  &__heading {
+     font-size: 1rem;
+      color: var(--light-text-color);
+
+  }
+}

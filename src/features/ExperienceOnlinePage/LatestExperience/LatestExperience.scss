@@ -1,0 +1,37 @@
+@import "../../../assets/styles/mixins.scss";
+
+.latest-experience {
+   margin-top: 3.2rem;
+
+   
+   &__slider {
+      .slick-initialized .slick-slide {
+         padding-right: 2rem;
+      }
+      
+      .slick-slide:first-child {
+         padding-left: var(--large-padding);
+
+         @include respond(big) {
+            padding-left: var(--medium-padding);
+         }
+         @include respond(small) {
+            padding-left: var(--small-padding);
+         }
+      }
+      .slick-slide:last-child {
+         padding-right: var(--large-padding);
+         @include respond(big) {
+            padding-right: var(--medium-padding);
+         }
+         @include respond(small) {
+            padding-right: var(--small-padding);
+         }
+      }
+      
+      .slick-arrow {
+         display: none !important;
+      }
+
+   }
+}

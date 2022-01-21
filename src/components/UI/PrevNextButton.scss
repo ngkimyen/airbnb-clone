@@ -1,0 +1,41 @@
+@import '../../assets/styles/mixins.scss';
+
+.navigate-button {
+   width: 3.2rem;
+   height: 3.2rem;  
+   @include flex-mixin(center,center);
+   fill: currentColor;
+   border-radius: 50%;
+   
+   
+   &:hover {
+      background-color: var(--light-shadow-color);
+   }
+
+   @include respond(small) {
+      &:hover {
+         background-color: transparent;
+      }
+   }
+
+
+   
+   > svg {
+      width: 1rem;
+      height: 1rem;
+   }
+
+   &--next {
+      order: 1;
+   }
+
+   &--big {
+      justify-content: start;
+
+      > svg {
+         width: 1.2rem;
+         height: 1.2rem;
+         stroke-width: 4;
+      }
+   }
+}

@@ -1,0 +1,37 @@
+$big-padding: 1.5rem;
+.search-btn {
+
+   grid-column: -2/-1;
+   grid-row: 1/2;
+   z-index: 10;
+
+   &--content {
+      background-color: var(--primary-color);
+      font-size: 1.6rem;
+      font-weight: var(--medium-font-weight);
+      width: fit-content;
+      padding-right: $big-padding;
+      border-radius: 50rem;
+   }
+
+   &--big {
+      font-size: 1.6rem;
+      margin-right: 1rem;
+      
+      &:hover > i {
+         filter: brightness(.9);
+      }
+      
+      > i {
+         padding: $big-padding;
+      }
+   }
+   
+   &__icon {
+      background-color: var(--primary-color);
+      color: var(--white-color);
+      padding: 1rem;
+      border-radius: 50%;
+   }
+}
+

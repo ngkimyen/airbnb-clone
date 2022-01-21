@@ -1,0 +1,80 @@
+@import "../../assets/styles/mixins.scss";
+
+$marginRight: 2rem;
+
+.footer-license {
+   padding: 2.4rem 0;
+   @include flex-mixin(center,space-between);
+
+   &__wrap {
+      @include flex-mixin(center,space-between);
+
+      @include respond(medium) {
+         flex-direction: column;
+      }
+   }
+
+   &__list {
+      @include flex-mixin;
+
+      @include respond(smallest) {
+         flex-direction: column;
+      }
+
+   }
+
+   &__heading {
+      font-size: 1.4rem;
+      margin-right: $marginRight;
+
+      @include respond(medium) {
+         margin-right: 0;
+      }
+   }
+
+   &__item {
+      margin-right: $marginRight;
+      position: relative;
+
+      &::before {
+         content: "";
+         width: 2px;
+         height: 2px;
+         background-color: var(--black-color);
+         border-radius: 50%;
+         position: absolute;
+         left: -1rem;
+         top: 50%;
+         transform: translateY(-50%);
+         
+      }
+
+      @include respond(smallest) {
+         margin-right: 0;
+         margin-top: .5rem;
+      }
+   }
+
+   &__platform {
+
+      > svg {
+         fill: var(--black-color);
+         width: 1.8rem;
+         height: 1.8rem;
+         cursor: pointer;
+         
+         &:not(:last-child) {
+            margin-right: $marginRight;
+         }
+      }
+   }
+
+   @include respond(medium) {
+      flex-direction: column-reverse;
+
+      &__platform {
+         margin-bottom: 1rem;
+      }
+   }
+}
+

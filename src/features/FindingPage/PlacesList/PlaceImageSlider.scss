@@ -1,0 +1,39 @@
+.slick-slider {
+
+   img {
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      border-radius: 1rem;
+   }
+
+   .slick-prev, .slick-next {
+      z-index: 1;
+   }
+
+   .slick-prev {
+      left: 1rem;
+   }
+
+   .slick-next {
+      right: 1.5rem;
+   }
+
+   .slick-prev:before, .slick-next:before {
+      font-size: 2.5rem;
+   }
+
+   .slick-dots {
+      bottom: 1rem;
+
+      li {
+         width: 1rem;
+         margin: 0 2px;
+
+         button:before {
+            color: var(--white-color);
+         }
+      }
+   }
+
+
+}

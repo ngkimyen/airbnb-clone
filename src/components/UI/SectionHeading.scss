@@ -1,0 +1,16 @@
+@import "../../assets/styles/mixins.scss";
+
+.section-heading {
+   font-size: 4.2rem;
+   font-weight: var(--medium-font-weight);
+   color: var(--black-color-2);
+   line-height: 1;
+
+   @include respond(big) {
+      font-size: 3.3rem;
+   }
+   @include respond(medium) {
+      font-size: 2.5rem;
+   }
+
+}
