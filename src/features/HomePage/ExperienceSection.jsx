@@ -20,7 +20,7 @@ const ExperienceSection = () => {
         của bạn`}
         headingType = "big "
         btnText="Trải nghiệm"
-        link="/experience"
+        link="/airbnb-clone/experience"
         url={ExperienceImg}
       />
       <BannerContainer
@@ -29,7 +29,7 @@ const ExperienceSection = () => {
         trải nghiệm tại nhà`}
         headingType = "big "
         btnText="Trải nghiệm trực tuyến"
-        link="/experience/online"
+        link="/airbnb-clone/experience/online"
         url={ExperienceOnlineImg}
       />
       </div>

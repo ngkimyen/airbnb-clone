@@ -12,7 +12,7 @@ const SubHeader = ({searchInput, headerIsFixed}) => {
 
    return (
       <header className={clsx("sub-header u-padding", {"sub-header--fixed": headerIsFixed})}>
-         {!screenIsSmall ? <HeaderLogo isLight/> : <NavLink to="/" ><PrevButton isBig/></NavLink>}
+         {!screenIsSmall ? <HeaderLogo isLight/> : <NavLink to="/airbnb-clone/" ><PrevButton isBig/></NavLink>}
          {!screenIsSmall && searchInput && searchInput}
          <HeaderOptions isLight/>
       </header>

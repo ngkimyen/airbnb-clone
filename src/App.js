@@ -11,10 +11,10 @@ function App() {
   return (
     <SearchProvider>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/flexible-finding" element={<FindingPage />} />
-        <Route path="/experience" element={<ExperiencePage />} />
-        <Route path="/experience/online" element={<ExperienceOnlinePage />} />
+        <Route path="/airbnb-clone/" element={<HomePage />} />
+        <Route path="/airbnb-clone/flexible-finding" element={<FindingPage />} />
+        <Route path="/airbnb-clone/experience" element={<ExperiencePage />} />
+        <Route path="/airbnb-clone/experience/online" element={<ExperienceOnlinePage />} />
       </Routes>
     </SearchProvider>
   );

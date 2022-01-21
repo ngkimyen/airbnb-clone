@@ -40,7 +40,7 @@ const inspiration_content = [
   },
 ];
 
-const InspirationSection = () => {
+const   InspirationSection = () => {
   const sectionRef = useRef();
   const { nextBtn, prevBtn, handleChange } = useNavigateSlider(
     sectionRef,
