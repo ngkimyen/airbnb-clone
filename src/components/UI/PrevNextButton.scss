@@ -6,6 +6,11 @@
    @include flex-mixin(center,center);
    border-radius: 50%;
    
+   &:disabled {
+      > svg {
+         fill: var(---light-text-color);
+      }
+   }
    
    &:hover {
       background-color: var(--light-shadow-color);
@@ -16,8 +21,6 @@
          background-color: transparent;
       }
    }
-
-
    
    > svg {
       width: 1rem;
