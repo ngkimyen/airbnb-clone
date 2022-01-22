@@ -4,7 +4,7 @@
    width: 3.2rem;
    height: 3.2rem;  
    @include flex-mixin(center,center);
-   fill: currentColor;
+   fill: var(--black-color-2);
    border-radius: 50%;
    
    
