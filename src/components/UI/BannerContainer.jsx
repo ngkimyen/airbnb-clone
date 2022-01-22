@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import "./BannerContainer.scss";
 import LinkButton from './LinkButton';
+import "./BannerContainer.scss";
 
 const BannerContainer = ({url,cssClass, heading, headingType , btnText, btnGradient, link}) => {
    return (

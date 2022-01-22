@@ -57,6 +57,18 @@
          }
       }
 
+      @include respond(small) {
+         &--medium {
+            font-size: 2.4rem;
+         }
+         &--big {
+            font-size: 2.7rem;
+         }
+         &--biggest {
+            font-size: 3.9rem;
+         }
+      }
+
    }
 
 

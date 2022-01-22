@@ -45,7 +45,7 @@ const LatestExperienceFilter = () => {
   };
 
   return (
-    <div className="latest-filter u-padding">
+    <div className="latest-filter">
       <div className="latest-filter__option">
         {default_option.map((item, index) => (
           <button key={`latest-btn-${index}`} className="latest-filter__button">

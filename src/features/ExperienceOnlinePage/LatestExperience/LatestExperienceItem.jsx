@@ -7,12 +7,12 @@ const LatestExperienceItem = ({ data }) => {
       className="latest-item"
       style={{ backgroundImage: `url('${data.image}')` }}
     >
-      <div className="latest-item__content">
-        <p className="latest-item__category">Bộ sưu tập</p>
-        <h3 className="latest-item__name">{data.name}</h3>
+        <div className="latest-item__content">
+          <p className="latest-item__category">Bộ sưu tập</p>
+          <h3 className="latest-item__name">{data.name}</h3>
 
-        <button>Hiển thị tất cả</button>
-      </div>
+          <button>Hiển thị tất cả</button>
+        </div>
     </div>
   );
 };

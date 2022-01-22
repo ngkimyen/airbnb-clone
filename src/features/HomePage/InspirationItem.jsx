@@ -6,8 +6,10 @@ const InspirationItem = ({data}) => {
       <div className="inspiration-item">
          <img src={data.image} className="inspiration-item__img" />
          <div className="inspiration-item__info" style={{background: data.color}}>
+            <div className="inspiration-item__info--wrap">
             <h3 className="inspiration-item__location">{data.location}</h3>
             <p className="inspiration-item__distance">Cách {data.distance}</p>
+            </div>
          </div>
       </div>
    );

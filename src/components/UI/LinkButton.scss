@@ -1,11 +1,11 @@
 @import "../../assets/styles/mixins.scss";
 
 .link-button {
-
    font-size: 1.6rem;
    font-weight: var(--medium-font-weight);
    padding: 1.5rem 2.5rem;
    background-color: var(--white-color);
+   color: var(--black-color-2);
    border-radius: 1rem;
 
    &:hover {

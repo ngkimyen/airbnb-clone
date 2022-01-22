@@ -21,7 +21,7 @@ const HeaderNavigation = () => {
             Trải nghiệm
          </li>
          <li className="header__navigation--item">
-            <NavLink to='/experience/online'>Trải nghiệm trực tuyến</NavLink>
+            <NavLink to='/airbnb-clone/experience/online'>Trải nghiệm trực tuyến</NavLink>
          </li>
       </ul>
    );

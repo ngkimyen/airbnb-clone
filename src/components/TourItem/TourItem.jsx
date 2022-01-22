@@ -3,7 +3,7 @@ import StarIcon from "../UI/StarIcon";
 import AbsoluteHeartBtn from "../UI/AbsoluteHeartBtn";
 import useConvertNumber from "../../custom-hooks/useConvertNumber";
 import {useTransition, animated} from "react-spring";
-
+import useViewPort from "../../custom-hooks/useViewPort";
 import "./TourItem.scss";
 
 const TourItem = ({ data, isExperienceTour}) => {
@@ -11,8 +11,10 @@ const TourItem = ({ data, isExperienceTour}) => {
   const [playVideo, setPlayVideo] = useState(false);
   const [hover, setHover] = useState(false);
   const [imgCounter, setImgCounter] = useState(0);
+  const {isSmall} = useViewPort();
 
   const handleMouseOver = () => {
+    if (isSmall) return;
     if (isExperienceTour) {
       setHover(true);
       return
@@ -22,6 +24,7 @@ const TourItem = ({ data, isExperienceTour}) => {
   };
 
   const handleMouseOut = () => {
+    if (isSmall) return;
     if (isExperienceTour) {
       setHover(false);
       setImgCounter(0);
@@ -31,6 +34,8 @@ const TourItem = ({ data, isExperienceTour}) => {
   };
 
   useEffect(() => {    
+    if (!window.matchMedia('(hover: hover)').matches) return;
+
     thumbnailRef.current.addEventListener("mouseover", handleMouseOver);
     thumbnailRef.current.addEventListener("mouseout", handleMouseOut);
 
@@ -42,7 +47,9 @@ const TourItem = ({ data, isExperienceTour}) => {
   }, []);
 
   useEffect( () => {
-    if (!isExperienceTour || !hover) return;
+    if (!window.matchMedia('(hover: hover)').matches) return;
+
+    if (!isExperienceTour || !hover || isSmall) return;
     let counter = 0
 
     const interval = setInterval ( () => {
@@ -76,11 +83,10 @@ const TourItem = ({ data, isExperienceTour}) => {
       <div className="tour-item__thumbnail" ref={thumbnailRef}>
         {!playVideo ? (
          transitions( (styles,index) => 
-            <animated.img style={hover ? styles : null} src={!isExperienceTour ? data.image : data.image[index]}  className="tour-item__img" />)
-          // <img src={!isExperienceTour ? data.image : data.image[imgCounter]}  className="tour-item__img" />
+            <animated.img style={hover ? styles : null} src={!isExperienceTour ? data.image : data.image[index]}  className="tour-item__img tour-item__thumbnail--visual" />)
         ) : (
           <video  
-            className="tour-item__video"
+            className="tour-item__video tour-item__thumbnail--visual"
             muted
             autoPlay
             loop

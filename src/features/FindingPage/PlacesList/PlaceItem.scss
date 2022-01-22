@@ -18,7 +18,9 @@
 
    &__heading{
       color: var(--black-color-2);
+      margin-top: 1rem;
    }
+
    &__location {
       font-weight: var(--bold-font-weight);
    }
@@ -37,6 +39,7 @@
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
+      flex: 1 0 0;
    }
 
    &__description {

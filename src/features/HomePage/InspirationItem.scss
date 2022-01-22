@@ -12,16 +12,20 @@
    }
 
    &__info {
-      padding: 2rem;
       color: var(--white-color);
-      height: 15vw;
-
-      @include respond(medium) {
-         height: 20vh;
-      } 
-      // @include respond(small) {
-      //    height: 25vh;
-      // } 
+      padding-top: 80%;
+      position: relative;
+      
+      // @include respond(medium) {
+         //    height: 20vh;
+         // } 
+         
+         &--wrap {
+         padding: 2rem;
+         position: absolute;
+         inset: 0;
+         height: 100%;
+      }
    }
 
    &__location {
@@ -36,6 +40,9 @@
       }   
       @include respond(medium) {
          font-size: 2.3rem;
+      }  
+      @include respond(small) {
+         font-size: 2rem;
       }  
    }
 

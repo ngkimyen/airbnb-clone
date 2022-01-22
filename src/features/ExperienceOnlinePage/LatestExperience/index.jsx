@@ -21,32 +21,18 @@ const LatestExperience = () => {
     arrow: false,
     speed: 500,
     slidesToScroll: 1,
-    slidesToShow: 2.3,
-    responsive: [
-      {
-        breakpoint: 1125,
-        settings: {
-          slidesToShow: 1.3,
-        },
-      },
-      {
-        breakpoint: 745,
-        settings: {
-          slidesToShow: 1.1,
-        },
-      }
-    ],
+    variableWidth: true
   };
 
   return (
-    <div className="latest-experience" ref={sectionRef}>
+    <div className="latest-experience u-padding" ref={sectionRef}>
       <SectionHeader
         heading="Trải nghiệm mới trong tuần này"
         isBigHeading
         nextBtnElement={nextBtn}
         prevBtnElement={prevBtn}
         onChange={handleChange}
-        cssClass="u-padding"
+        cssClass=""
       />
       <div className="latest-experience__slider">
          <Slider {...setting}>

@@ -2,9 +2,9 @@ import React from "react";
 import BannerContainer from "../../components/UI/BannerContainer";
 import ExperienceImg from "../../assets/images/experience.jpeg";
 import ExperienceOnlineImg from "../../assets/images/experience-online.jpeg";
-import SectionHeading from "../../components/UI/SectionHeading";
-import "./ExperienceSection.scss";
 import SectionHeader from "../ExperienceOnlinePage/LatestExperience/SectionHeader";
+
+import "./ExperienceSection.scss";
 
 const ExperienceSection = () => {
   return (

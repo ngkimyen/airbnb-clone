@@ -5,6 +5,7 @@ import "./PlaceImageSlider.scss";
 const PlaceImageSlider = ({ images }) => {
   const settings = {
     dots: true,
+    className: "place-image-slider",
     infinite: true,
     speed: 300,
     slidesToShow: 1,
@@ -14,15 +15,13 @@ const PlaceImageSlider = ({ images }) => {
 
 
   return (
-    <div className="container">
       <Slider {...settings}>
         {images.map((image, index) => (
-          <div key={`slider-img${index}`}>
+          <div key={`slider-img${index}`} className="slider-box">
             <img src={image} />
           </div>
         ))}
       </Slider>
-    </div>
   );
 };
 

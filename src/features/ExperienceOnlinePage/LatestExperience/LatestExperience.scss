@@ -2,32 +2,49 @@
 
 .latest-experience {
    margin-top: 3.2rem;
-
    
    &__slider {
-      .slick-initialized .slick-slide {
-         padding-right: 2rem;
+      .slick-slide {
+         margin: 0 1rem;
+         width: 40vw;
+         
+         @include respond(medium) {
+            width: 70vw;
+         }
+         
+         @include respond(small) {
+            width: 80vw;
+         }
+
+         > div {
+            position: relative;
+            padding-top: 60%;
+
+            @include respond(small) {
+               padding-top: 120%;
+            }
+         }
       }
       
-      .slick-slide:first-child {
-         padding-left: var(--large-padding);
+      // .slick-slide:first-child {
+      //    padding-left: var(--large-padding);
 
-         @include respond(big) {
-            padding-left: var(--medium-padding);
-         }
-         @include respond(small) {
-            padding-left: var(--small-padding);
-         }
-      }
-      .slick-slide:last-child {
-         padding-right: var(--large-padding);
-         @include respond(big) {
-            padding-right: var(--medium-padding);
-         }
-         @include respond(small) {
-            padding-right: var(--small-padding);
-         }
-      }
+      //    @include respond(big) {
+      //       padding-left: var(--medium-padding);
+      //    }
+      //    @include respond(small) {
+      //       padding-left: var(--small-padding);
+      //    }
+      // }
+      // .slick-slide:last-child {
+      //    padding-right: var(--large-padding);
+      //    @include respond(big) {
+      //       padding-right: var(--medium-padding);
+      //    }
+      //    @include respond(small) {
+      //       padding-right: var(--small-padding);
+      //    }
+      // }
       
       .slick-arrow {
          display: none !important;

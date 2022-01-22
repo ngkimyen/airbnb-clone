@@ -27,10 +27,7 @@
    &__button {
       @extend %button-style;
       border: 1px solid var(--dark-border-color);
-      
-      &:not(:last-child) {
-         margin-right: 1rem;
-      }
+      margin-right: 1rem;
 
       &:hover {
          border-color: var(--black-color);
