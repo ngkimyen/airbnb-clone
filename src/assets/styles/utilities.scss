@@ -1,6 +1,15 @@
 @import "../styles/mixins.scss";
 
 
+.container {
+  width: 100%;
+  margin: 0 auto;
+
+  @media (min-width: 1441px) {
+    max-width: 1440px;
+  }
+}
+
 .u-padding {
   padding-left: var(--large-padding);
   padding-right: var(--large-padding);
@@ -125,6 +134,7 @@
 
 .u-connect-height {
   height: 45vw;
+  max-height: 80rem;
 
   @include respond(small) {
     height: 75vh;
@@ -133,10 +143,13 @@
 
 .u-flexible-height {
   height: 45vw;
+  max-height: 70rem;
+
   @include respond(small) {
     height: 100vh;
   }
 }
+
 .u-height-50vw {
   height: 50vw;
 }
@@ -161,10 +174,6 @@
   }
 }
 
-.u-wrapper {
-  max-width: 192rem;
-  margin: 0 auto;
-}
 
 .u-bold {
   font-weight: var(--bold-font-weight);

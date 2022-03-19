@@ -7,10 +7,10 @@ import MobileNavigation from '../Header/MobileNavigation/MobileNavigation';
 
 const Footer = () => {
    return (
-      <footer className="footer u-padding">
-         <div className="u-wrapper">
-         <FooterContent />
-         <FooterLicense />
+      <footer className="footer">
+         <div className="container u-padding">
+            <FooterContent />
+            <FooterLicense />
          </div>
 
          <MobileNavigation />

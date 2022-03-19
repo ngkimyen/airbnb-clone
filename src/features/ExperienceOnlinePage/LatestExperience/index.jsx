@@ -25,27 +25,29 @@ const LatestExperience = () => {
   };
 
   return (
-    <div className="latest-experience u-padding" ref={sectionRef}>
-      <SectionHeader
-        heading="Trải nghiệm mới trong tuần này"
-        isBigHeading
-        nextBtnElement={nextBtn}
-        prevBtnElement={prevBtn}
-        onChange={handleChange}
-        cssClass=""
-      />
-      <div className="latest-experience__slider">
-         <Slider {...setting}>
-         {data.map((item, index) => (
-            <LatestExperienceItem
-               key={`latest-${index}-${item.id}`}
-               data={item}
-            />
-         ))}
-         </Slider>
-      </div>
+    <div className="latest-experience" ref={sectionRef}>
+      <div className="container u-padding">
+        <SectionHeader
+          heading="Trải nghiệm mới trong tuần này"
+          isBigHeading
+          nextBtnElement={nextBtn}
+          prevBtnElement={prevBtn}
+          onChange={handleChange}
+          cssClass=""
+        />
+        <div className="latest-experience__slider">
+          <Slider {...setting}>
+          {data.map((item, index) => (
+              <LatestExperienceItem
+                key={`latest-${index}-${item.id}`}
+                data={item}
+              />
+          ))}
+          </Slider>
+        </div>
 
-      <LatestExperienceFilter />
+        <LatestExperienceFilter />
+        </div>
     </div>
   );
 };

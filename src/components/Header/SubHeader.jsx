@@ -11,10 +11,12 @@ const SubHeader = ({searchInput, headerIsFixed}) => {
    const {isSmall : screenIsSmall} = useViewPort();
 
    return (
-      <header className={clsx("sub-header u-padding", {"sub-header--fixed": headerIsFixed})}>
-         {!screenIsSmall ? <HeaderLogo isLight/> : <NavLink to="/airbnb-clone/" ><PrevButton isBig/></NavLink>}
-         {!screenIsSmall && searchInput && searchInput}
-         <HeaderOptions isLight/>
+      <header className={clsx("sub-header", {"sub-header--fixed": headerIsFixed})}>
+         <div className="container u-padding sub-header-container">
+            {!screenIsSmall ? <HeaderLogo isLight/> : <NavLink to="/airbnb-clone/" ><PrevButton isBig/></NavLink>}
+            {!screenIsSmall && searchInput && searchInput}
+            <HeaderOptions isLight/>
+         </div>
       </header>
    );
 };

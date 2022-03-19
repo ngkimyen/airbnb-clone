@@ -37,18 +37,19 @@ const CategorySection = ({ heading, data, id }) => {
 
   return (
     <div id={id} className="category-section" ref={sectionRef}>
-      <SectionHeader
-        heading={heading}
-        description={data.length}
-        nextBtnElement={nextBtn}
-        prevBtnElement={prevBtn}
-        onChange={handleChange}
-      />
+        <SectionHeader
+          heading={heading}
+          description={data.length}
+          nextBtnElement={nextBtn}
+          prevBtnElement={prevBtn}
+          onChange={handleChange}
+        />
         <Slider {...settings}>
           {data.map((item, index) => (
             <TourItem key={`${item.id}-${index}`} data={item} />
           ))}
         </Slider>
+
     </div>
   );
 };

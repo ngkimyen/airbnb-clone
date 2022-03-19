@@ -9,7 +9,7 @@
 
 
    &__container {
-      @include grid-mixin(repeat(auto-fit, minmax(32.2rem, 1fr)), 50vw);
+      @include grid-mixin(repeat(auto-fit, minmax(32.2rem, 1fr)));
       grid-column-gap: 2.5rem;
 
       @include respond(big) {
@@ -22,5 +22,10 @@
          grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 
       }
+   }
+
+   .banner-container {
+      height: 45vw;
+      max-height: 70rem;
    }
 }

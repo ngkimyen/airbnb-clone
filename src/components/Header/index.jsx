@@ -14,8 +14,8 @@ const Header = () => {
    const {showSearchBlock, isSticky} = state;
 
    return (
-      <header className={clsx("header", "u-padding", { "header--sticky" : !showSearchBlock || isSticky})}>
-         <div className="header__container">
+      <header className={clsx("header", { "header--sticky" : !showSearchBlock || isSticky})}>
+         <div className="container header__container u-padding">
             <HeaderLogo isSticky={!showSearchBlock || isSticky}/>
             {(showSearchBlock || isSticky) && <HeaderNavigation/>}
             {!showSearchBlock && !isSticky  && <HeaderSearch/> }

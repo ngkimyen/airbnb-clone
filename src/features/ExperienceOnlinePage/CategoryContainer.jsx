@@ -6,7 +6,8 @@ import "./CategoryContainer.scss";
 
 const CategoryContainer = () => {
    return (
-      <div className="category-container u-padding">
+      <div className="category-container">
+         <div className="container u-padding">
             <CategorySection id="guided_tours" heading="Lên kế hoạch cho chuyến đi với sự trợ giúp từ Người tổ chức trải nghiệm tại địa phương trên khắp thế giới" data={experience_online_list.guided_tours} />
             <CategorySection id="best_sellers" heading="Bán chạy nhất" data={experience_online_list.best_sellers} />
             <CategorySection id="weekend_tours" heading="Lập kế hoạch cho cuối tuần này" data={experience_online_list.weekend_tours} />
@@ -14,6 +15,7 @@ const CategoryContainer = () => {
 
             <LinkButton isDark text="Xem thêm" />
          </div>
+      </div>
    );
 };
 

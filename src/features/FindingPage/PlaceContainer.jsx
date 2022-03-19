@@ -14,14 +14,16 @@ const PlacesContainer = () => {
   };
 
   return (
-    <div  style={{background: "var(--background-color)"}} className="u-padding">
-      <nav className="places-navigation">
-        <PlaceNavigationWrapper
-          initialId={initialId}
-          onGetData={handleGetData}
-        />
-      </nav>
-      <PlaceList data={placeList} />
+    <div  style={{background: "var(--background-color)"}}>
+      <div className="container u-padding">
+        <nav className="places-navigation">
+          <PlaceNavigationWrapper
+            initialId={initialId}
+            onGetData={handleGetData}
+          />
+        </nav>
+        <PlaceList data={placeList} />
+      </div>
     </div>
   );
 };

@@ -16,8 +16,6 @@
    
    &__container {
       height: var(--header-height);
-      max-width: 180rem;
-      margin: 0 auto;
       @include grid-mixin(1fr max-content 1fr, false, center);
 
       @include respond(medium) {

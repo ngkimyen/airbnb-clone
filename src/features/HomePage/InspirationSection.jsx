@@ -72,25 +72,27 @@ const   InspirationSection = () => {
 
   return (
     <section
-      className="inspiration-section u-padding u-padding-top-48 u-padding-bottom-48"
+      className="inspiration-section"
       ref={sectionRef}
     >
-      <SectionHeader
-        heading="Cảm hứng cho chuyến đi tiếp theo của bạn"
-        isBiggestHeading
-        cssClass="u-padding-bottom-48"
-        nextBtnElement={nextBtn}
-        prevBtnElement={prevBtn}
-        onChange={handleChange}
-      />
+      <div className="container u-padding u-padding-top-48 u-padding-bottom-48">
+        <SectionHeader
+          heading="Cảm hứng cho chuyến đi tiếp theo của bạn"
+          isBiggestHeading
+          cssClass="u-padding-bottom-48"
+          nextBtnElement={nextBtn}
+          prevBtnElement={prevBtn}
+          onChange={handleChange}
+        />
 
-      <div className="inspiration-section__list">
-        <Slider {...settings}>
-          {inspiration_content.map((item, index) => (
-            <InspirationItem key={`inspiration-${index}`} data={item} />
-          ))}
-        </Slider>
-      </div>
+        <div className="inspiration-section__list">
+          <Slider {...settings}>
+            {inspiration_content.map((item, index) => (
+              <InspirationItem key={`inspiration-${index}`} data={item} />
+            ))}
+          </Slider>
+        </div>
+        </div>
     </section>
   );
 };
